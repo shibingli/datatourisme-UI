@@ -13,7 +13,7 @@
   box-shadow: $card-box-shadow;
 }
 
-.card > * {
+.card>* {
   flex-shrink: 0;
 }
 
@@ -27,12 +27,12 @@
   padding-top: $card-spacer-y / 2;
   padding-bottom: $card-spacer-y / 2;
 
-  > *:first-child {
+  >*:first-child {
     flex: 1;
   }
 }
 
-.card-header + .card-footer {
+.card-header+.card-footer {
   border-top-width: 0;
 }
 
@@ -80,10 +80,33 @@
 
 .card-table thead th {
   border-top-width: 0;
+  color: #8C8B8B;
+  font-family: "Cerebri Sans";
+  font-size: 12px;
+ 
+
+  small {
+    color: #8C8B8B;
+    font-family: "Cerebri Sans";
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 13px;
+    text-transform: initial;
+    display: block;
+    text-align: center;
+  }
 }
 
 .card-table thead th,
 .card-table tbody td {
+  text-align: center;
+  color: #0E3337;
+  font-family: "Cerebri Sans";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 18px;
 
   &:first-child {
     padding-left: $card-spacer-x !important;
@@ -94,16 +117,21 @@
   }
 }
 
-.card > .card-table:first-child,
-.card > .table-responsive:first-child > .card-table {
+.card>.card-table:first-child,
+.card>.table-responsive:first-child>.card-table {
 
-  > thead, > tbody, > tfoot {
+  >thead,
+  >tbody,
+  >tfoot {
 
     &:first-child {
 
-      > tr:first-child {
+      >tr:first-child {
 
-        > th, > td {
+        >th,
+        >td {
+
+
 
           &:first-child {
             border-top-left-radius: $card-border-radius;
@@ -207,7 +235,7 @@
   border-bottom: 0;
 }
 
-.card-header-flush + .card-body {
+.card-header-flush+.card-body {
   padding-top: 0;
 }
 
@@ -230,7 +258,8 @@
 
 .card-fill {
 
-  @each $breakpoint, $value in $grid-breakpoints {
+  @each $breakpoint,
+  $value in $grid-breakpoints {
 
     &-#{$breakpoint} {
 
@@ -270,7 +299,8 @@
 
 .card-adjust {
 
-  @each $breakpoint, $value in $grid-breakpoints {
+  @each $breakpoint,
+  $value in $grid-breakpoints {
 
     &-#{$breakpoint} {
 
